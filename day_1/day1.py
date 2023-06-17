@@ -2334,3 +2334,25 @@ for i in lista_total_calorias_geral:
         elfo_com_mais_calorias = i[0]
 
 print(f"O elfo com o maior número de calorias foi o {elfo_com_mais_calorias}° com {maior} calorias.")
+
+# ----------------------------------------------------------------------------------------------------------
+#                                                 Parte 2 
+# ----------------------------------------------------------------------------------------------------------
+
+"""
+No momento em que você calcula a resposta para a pergunta dos Elfos, eles já perceberam que o elfo que carrega mais calorias de comida pode acabar ficando sem lanches.
+
+Para evitar esta situação inaceitável, os Elfos gostariam de saber o total de Calorias transportadas pelos três principais Elfos que carregam mais Calorias. Dessa forma, mesmo que um desses elfos fique sem lanches, eles ainda têm dois backups.
+
+No exemplo acima, os três principais Elfos são o quarto Elfo (com 24000 Calorias), depois o terceiro Elfo (com 11000 Calorias), depois o quinto Elfo (com 10000 Calorias). A soma das calorias carregadas por estes três elfos é de 45000.
+
+Encontre os três principais elfos que carregam mais calorias. Quantas calorias esses elfos carregam no total?
+"""
+lista_total_calorias_geral_ordenada = sorted(lista_total_calorias_geral, key=lambda x: x[1], reverse=True)
+
+top1 = lista_total_calorias_geral_ordenada[0]
+top2 = lista_total_calorias_geral_ordenada[1]
+top3 = lista_total_calorias_geral_ordenada[2]
+
+soma_top_3 = top1[1] + top2[1] + top3[1]
+print(f"O 1° lugar foi o {top1[0]}° elfo com {top1[1]} calorias, o 2° lugar foi o {top2[0]}° elfo com {top2[1]} calorias, o 3° lugar foi o {top3[0]}° elfo com {top3[1]} calorias e a soma total foi de {soma_top_3} calorias")
