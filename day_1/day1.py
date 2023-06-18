@@ -1,33 +1,41 @@
 """
---- Dia 1: Contagem de calorias ---
-As renas do Papai Noel normalmente comem comida regular de renas, mas precisam de muita energia mágica para entregar presentes no Natal. Para isso, seu lanche favorito é 
-um tipo especial de carambola que só cresce nas profundezas da selva. Os Elfos trouxeram você em sua expedição anual ao bosque onde a fruta cresce.
+--- Day 1: Calorie Counting ---
+Santa's reindeer typically eat regular reindeer food, but they need a lot of magical energy to deliver presents on Christmas. For that, their favorite snack is a special type of star fruit that only grows deep in the jungle. The Elves have brought you on their annual expedition to the grove where the fruit grows.
 
-Para fornecer energia mágica suficiente, a expedição precisa recuperar um mínimo de cinquenta estrelas até 25 de dezembro. Embora os Elfos garantam que o bosque tem muitas 
-frutas, você decide pegar qualquer fruta que você vê ao longo do caminho, por precaução.
+To supply enough magical energy, the expedition needs to retrieve a minimum of fifty stars by December 25th. Although the Elves assure you that the grove has plenty of fruit, you decide to grab any fruit you see along the way, just in case.
 
-Colete estrelas resolvendo quebra-cabeças. Dois quebra-cabeças serão disponibilizados em cada dia no calendário do Advento; O segundo quebra-cabeça é desbloqueado quando 
-você completa o primeiro. Cada quebra-cabeça concede uma estrela. Boa sorte!
+Collect stars by solving puzzles. Two puzzles will be made available on each day in the Advent calendar; the second puzzle is unlocked when you complete the first. Each puzzle grants one star. Good luck!
 
-A selva deve estar muito coberta e difícil de navegar em veículos ou de acesso pelo ar; a expedição dos elfos tradicionalmente vai a pé. À medida que seus barcos se 
-aproximam da terra, os Elfos começam a fazer um inventário de seus suprimentos. Uma consideração importante é a comida - em particular, o número de calorias que cada elfo 
-está carregando (sua entrada de quebra-cabeça).
+The jungle must be too overgrown and difficult to navigate in vehicles or access from the air; the Elves' expedition traditionally goes on foot. As your boats approach land, the Elves begin taking inventory of their supplies. One important consideration is food - in particular, the number of Calories each Elf is carrying (your puzzle input).
 
-Os Elfos se revezam anotando o número de calorias contidas nas várias refeições, lanches, rações, etc. que trouxeram consigo, um item por linha. Cada elfo separa seu 
-próprio inventário do inventário do elfo anterior (se houver) por uma linha em branco.
+The Elves take turns writing down the number of Calories contained by the various meals, snacks, rations, etc. that they've brought with them, one item per line. Each Elf separates their own inventory from the previous Elf's inventory (if any) by a blank line.
 
-Esta lista representa as calorias dos alimentos transportados por cinco elfos:
+For example, suppose the Elves finish writing their items' Calories and end up with the following list:
 
-O primeiro elfo está carregando alimentos com 1000, 2000 e 3000 calorias, um total de 6000 calorias.
-O segundo elfo está carregando um item alimentar com 4000 calorias.
-O terceiro elfo está carregando alimentos com 5000 e 6000 calorias, um total de 11000 calorias.
-O quarto elfo está carregando alimentos com 7000, 8000 e 9000 calorias, um total de 24000 calorias.
-O quinto elfo está carregando um item alimentar com 10000 calorias.
+1000
+2000
+3000
 
-Caso os Elfos fiquem com fome e precisem de lanches extras, eles precisam saber qual elfo perguntar: eles gostariam de saber quantas calorias estão sendo carregadas pelo 
-elfo que carrega mais calorias. No exemplo acima, este é 24000 (carregado pelo quarto elfo).
+4000
 
-Encontre o elfo que carrega mais calorias. Quantas calorias totais esse elfo carrega?
+5000
+6000
+
+7000
+8000
+9000
+
+10000
+This list represents the Calories of the food carried by five Elves:
+
+The first Elf is carrying food with 1000, 2000, and 3000 Calories, a total of 6000 Calories.
+The second Elf is carrying one food item with 4000 Calories.
+The third Elf is carrying food with 5000 and 6000 Calories, a total of 11000 Calories.
+The fourth Elf is carrying food with 7000, 8000, and 9000 Calories, a total of 24000 Calories.
+The fifth Elf is carrying one food item with 10000 Calories.
+In case the Elves get hungry and need extra snacks, they need to know which Elf to ask: they'd like to know how many Calories are being carried by the Elf carrying the most Calories. In the example above, this is 24000 (carried by the fourth Elf).
+
+Find the Elf carrying the most Calories. How many total Calories is that Elf carrying?
 """
 
 lista_calorias_gerais = """
@@ -2335,18 +2343,15 @@ for i in lista_total_calorias_geral:
 
 print(f"O elfo com o maior número de calorias foi o {elfo_com_mais_calorias}° com {maior} calorias.")
 
-# ----------------------------------------------------------------------------------------------------------
-#                                                 Parte 2 
-# ----------------------------------------------------------------------------------------------------------
-
 """
-No momento em que você calcula a resposta para a pergunta dos Elfos, eles já perceberam que o elfo que carrega mais calorias de comida pode acabar ficando sem lanches.
+--- Part Two ---
+By the time you calculate the answer to the Elves' question, they've already realized that the Elf carrying the most Calories of food might eventually run out of snacks.
 
-Para evitar esta situação inaceitável, os Elfos gostariam de saber o total de Calorias transportadas pelos três principais Elfos que carregam mais Calorias. Dessa forma, mesmo que um desses elfos fique sem lanches, eles ainda têm dois backups.
+To avoid this unacceptable situation, the Elves would instead like to know the total Calories carried by the top three Elves carrying the most Calories. That way, even if one of those Elves runs out of snacks, they still have two backups.
 
-No exemplo acima, os três principais Elfos são o quarto Elfo (com 24000 Calorias), depois o terceiro Elfo (com 11000 Calorias), depois o quinto Elfo (com 10000 Calorias). A soma das calorias carregadas por estes três elfos é de 45000.
+In the example above, the top three Elves are the fourth Elf (with 24000 Calories), then the third Elf (with 11000 Calories), then the fifth Elf (with 10000 Calories). The sum of the Calories carried by these three elves is 45000.
 
-Encontre os três principais elfos que carregam mais calorias. Quantas calorias esses elfos carregam no total?
+Find the top three Elves carrying the most Calories. How many Calories are those Elves carrying in total?
 """
 lista_total_calorias_geral_ordenada = sorted(lista_total_calorias_geral, key=lambda x: x[1], reverse=True)
 
